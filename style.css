@@ -1,0 +1,26 @@
+#clickArea{
+	width: 90%;
+	height: 50vh;
+	margin: 0 auto;
+	background: #ccc;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 30px;
+	display: table;
+	transition: background .3s ease-out;
+}
+#clickArea:hover{
+	background: #bbb;
+	transition: background .3s ease-in;
+}
+#clickArea > p{
+	vertical-align: middle;
+	display: table-cell;
+}
+#codesArea{
+	width: 90%;
+	border: 1px solid;
+	margin: 30px auto;
+	min-height: 30px;
+	padding: 10px;
+}
