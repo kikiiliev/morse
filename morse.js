@@ -1,3 +1,5 @@
+"use strict";
+
 var morse = {
 	  "-----": "0",
 	  ".----": "1",
@@ -54,11 +56,11 @@ var shortClick = 100;
 var longClick = 500;
 var startTime = 0;
 var codes = '';
+var dot = '.';
+var dash = '-';
 
 function clickDown(){
-
 	startTime = Date.now();
-
 }
 
 function clickUp(){
@@ -67,12 +69,10 @@ function clickUp(){
 
 
 	if(diffTime <= shortClick){
-		codes += '.';
-		codesArea.innerHTML += '.';
+		insertDot();
 	}
 	else if(diffTime <= longClick){
-		codes += '-';
-		codesArea.innerHTML += '-';
+		insertDash();
 	}
 	else{
 		
@@ -85,6 +85,16 @@ function clickUp(){
 		}
 		codes = '';
 	}
+}
+
+function insertDot() {
+	codes += dot;
+	codesArea.innerHTML += dot;
+}
+
+function insertDash() {
+	codes += dash;
+	codesArea.innerHTML += dash;
 }
 
 clickArea.onmousedown = clickDown; 
